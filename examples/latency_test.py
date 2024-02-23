@@ -5,9 +5,9 @@ from tqdm import tqdm
 from vllm import EngineArgs, LLMEngine, SamplingParams, RequestOutput
 from vllm import LLM
 
-path = '/data/zyh/datasets/ShareGPT52K/sg_90k_part1.json'
+path = '/data/leili/datasets/ShareGPT52K/sg_90k_part1.json'
 max_length = 2048
-max_test_num = 100
+max_test_num = 10
 sampling_params = SamplingParams(max_tokens=256)
 
 def create_test_prompts() -> List[str]:

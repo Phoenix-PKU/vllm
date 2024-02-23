@@ -8,7 +8,7 @@ end_test_id = 10
 max_tokens = 2048
 file_path = '/data/leili/datasets/human_eval.json'
 # 'human_eval.jsonl'
-model_path = "/data/zyh/llm-finetune/llama2-hf/7B"
+model_path = "/data/leili/models/llama2-7B/"
 save_file_path = "human_eval_llama2_7B.txt"
 save_png_path = "human_eval_llama2_7B.png"
 prompts = []

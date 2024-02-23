@@ -7,12 +7,15 @@ start_test_id = 0
 end_test_id = 10
 max_tokens = 2048
 max_input_length = 2048
-model_path = [  "/data/leili/models/opt1.3B",
+model_path = [  "/data/leili/models/llama2-7B/",
+                "/data/leili/models/opt1.3B",
                 "/data/leili/models/opt13B"]
-json_file_path = ['/data/zyh/datasets/ShareGPT52K/sg_90k_part1.json', 
-                  '/data/zyh/datasets/ShareGPT52K/sg_90k_part2.json']
-save_file_path = ["sharegpt-opt1_3b.txt", "sharegpt-opt13b.txt"]
-save_png_path = ["sharegpt-opt1_3b.png", "sharegpt-opt13b.png"]
+json_file_path = ['/data/leili/datasets/ShareGPT52K/sg_90k_part1.json', 
+                  '/data/leili/datasets/ShareGPT52K/sg_90k_part2.json']
+save_file_path = ["sharegpt-llama2-7B.txt",
+    "sharegpt-opt1_3b.txt", "sharegpt-opt13b.txt"]
+save_png_path = ["sharegpt-llama2-7B.png",
+    "sharegpt-opt1_3b.png", "sharegpt-opt13b.png"]
 model_num = int(sys.argv[1])
 prompts = []
 token_length = []

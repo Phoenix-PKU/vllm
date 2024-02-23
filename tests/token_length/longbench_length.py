@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 start_test_id = 0
 end_test_id = 10
 max_tokens = 2048
-model_path = "/data/zyh/llm-finetune/llama2-hf/7B"
+model_path = "/data/leili/models/llama2-7B/"
 directory_path = "/data/leili/datasets/longbench/"
 files = os.listdir(directory_path)
 save_file_path = "longbench_llama2_7B.txt"
