@@ -52,7 +52,7 @@ class EngineArgs:
         parser.add_argument(
             '--model',
             type=str,
-            default='facebook/opt-125m',
+            default='/data/leili/models/llama2-7B',
             help='name or path of the huggingface model to use')
         parser.add_argument(
             '--tokenizer',
@@ -145,7 +145,7 @@ class EngineArgs:
         parser.add_argument('--block-size',
                             type=int,
                             default=EngineArgs.block_size,
-                            choices=[8, 16, 32],
+                            choices=[1, 2, 4, 8, 16, 32, 64, 128],
                             help='token block size')
         # TODO(woosuk): Support fine-grained seeds (e.g., seed per request).
         parser.add_argument('--seed',
