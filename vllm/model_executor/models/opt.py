@@ -292,6 +292,9 @@ class OPTForCausalLM(nn.Module):
         self.linear_method = linear_method
         self.model = OPTModel(config, linear_method)
         self.lm_head_weight = self.model.decoder.embed_tokens.weight
+        # FIXME(leili): vocab size mismatch bug, this is a hack.
+        # https://github.com/vllm-project/vllm/issues/340
+        config.vocab_size = 50265
         self.sampler = Sampler(config.vocab_size)
 
     def forward(
