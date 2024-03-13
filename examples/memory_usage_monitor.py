@@ -20,9 +20,19 @@ def get_memory():
 
 
 if __name__ == "__main__":
-    command = ["python3", "latency_profile.py", "--tensor-parallel-size=2"]
+    command = ["python3", "latency_profile.py", '--max-num-seqs=1']
+    if True:
+        command.append("--tensor-parallel-size=2")
+
     process = subprocess.Popen(command)
+    memory_list = [[], []]
+    """
     while process.poll() is None:
         mem0, mem1 = get_memory()
-        print(mem0, mem1)
+        # print(mem0, mem1)
+        memory_list[0].append(mem0)
+        memory_list[1].append(mem1)
         time.sleep(0.1)
+    print("max memory of GPU0: ", max(memory_list[0]))
+    print("max memory of GPU1: ", max(memory_list[1]))
+    """
